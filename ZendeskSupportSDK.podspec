@@ -24,7 +24,7 @@ Pod::Spec.new do |s|
   s.user_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
   s.source       = { :git => "https://github.com/zendesk/support_sdk_ios.git", :tag => s.version }
   s.vendored_frameworks = 'SupportSDK.xcframework'
-  s.preserve_paths = 'SupportSDK.xcframework', 'SupportSDK.dSYMs/*.dSYM'
+  s.preserve_paths = 'SupportSDK.xcframework', 'SupportSDK.dSYMs/SupportSDK.framework.*.dSYM'
   s.dependency 'ZendeskSupportProvidersSDK', '~> 5.2.0'
   s.dependency 'ZendeskMessagingSDK', '~> 3.8.1'
 end
